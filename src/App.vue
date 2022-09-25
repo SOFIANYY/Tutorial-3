@@ -1,6 +1,9 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HomePage msg="Welcome to Your Vue.js App"/>
+  <div>
+    <base-header />
+    <HomePage />
+    <base-footer />
+  </div>
 </template>
 
 <script>
