@@ -38,6 +38,7 @@ export default {
   data () {
     return {
       isPending: false,
+      i:0
     }
   },
 
@@ -49,13 +50,14 @@ export default {
         console.log("rejected")
     },
     handleClick () {
+      this.i=this.i+1000
       const originalOnClick = ()=>{ /** @type {() => Promise<void>} */ (this.$attrs.onClick)}
       this.isPending = true
       const promise= new Promise((resolve) => {
         setTimeout(() => {
         resolve(originalOnClick());
         this.isPending=false;
-        }, 2000);
+        }, this.i);
       });
       promise.then(this.handleFulfilledA, this.handleRejectedA)
     }
