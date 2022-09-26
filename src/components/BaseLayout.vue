@@ -1,6 +1,6 @@
 <template>
 <header>
- <div id="container">
+<div id="container">
     <div class="div1">
     <a href="https://www.google.com">
     <img class="link1" src="../assets/google.png">
@@ -14,12 +14,15 @@
     <img class="link2" src="../assets/efrei.png">
     </a>
     </div>
-</div>
-</header>
+    </div>
+    </header>
+    <slot name="default"></slot>
+    <footer>
+    <p>Legal credits| @2022</p>
+    
+    </footer>
 </template>
 
-<script>
-</script>
 
 <style>
 #container{
@@ -65,5 +68,12 @@ header{
 
     width:100%;
 }
+footer{
+    background:#ccc;
+    position:absolute;
 
+    bottom:0;
+
+    width:100%;
+}
 </style>

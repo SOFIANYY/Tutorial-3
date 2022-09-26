@@ -1,5 +1,6 @@
-<template>
-<h1 class="homepageHeader">here is the homepage Component</h1>
+
+<template v-slot:default>
+<h1 class="homepageHeader" >here is the homepage Component</h1>
 </template>
 
 <script>
